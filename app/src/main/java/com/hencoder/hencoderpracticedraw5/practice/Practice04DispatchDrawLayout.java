@@ -24,7 +24,7 @@ public class Practice04DispatchDrawLayout extends LinearLayout {
     }
 
     {
-        setWillNotDraw(false);
+        //setWillNotDraw(false);
     }
 
     // 把 onDraw() 换成 dispatchDraw()，让绘制内容可以盖住子 View
@@ -32,7 +32,10 @@ public class Practice04DispatchDrawLayout extends LinearLayout {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+    }
 
+    @Override protected void dispatchDraw(Canvas canvas) {
+        super.dispatchDraw(canvas);
         pattern.draw(canvas);
     }
 

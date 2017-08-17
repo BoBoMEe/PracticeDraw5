@@ -26,6 +26,7 @@ public class Practice03OnDrawLayout extends LinearLayout {
 
     {
         // 在这里插入 setWillNotDraw(false) 以启用完整的绘制流程
+        setWillNotDraw(false);
     }
 
     @Override
@@ -49,9 +50,9 @@ public class Practice03OnDrawLayout extends LinearLayout {
             spots[3] = new Practice03OnDrawLayout.Pattern.Spot(0.62f, 0.78f, 0.083f);
         }
 
-        private Pattern(Practice03OnDrawLayout.Pattern.Spot[] spots) {
-            this.spots = spots;
-        }
+        //private Pattern(Practice03OnDrawLayout.Pattern.Spot[] spots) {
+        //    this.spots = spots;
+        //}
 
         {
             patternPaint.setColor(Color.parseColor("#A0E91E63"));
